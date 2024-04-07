@@ -1,0 +1,31 @@
+                            TOPOLOGY 1 (Parallel Then Series )
+
+1) This is the approach used in most passenger car electric vehicles and smaller battery pack designs.
+2) All of the cells working in parallel are joined together in groups and then these are joined in Series
+
+
+PROS
+
+1) Simplest control
+2) Lower cost
+
+CONS
+1) Capacity of pack determined in design and manufacture
+2) No redundancy
+
+                            TOPOLOGY 2  (Series Then Parallel)
+
+1) This approach gives more flexibility for very large packs
+2) The cells are wire together in series to get to the full system voltage,these series strings are then connected in parallel
+
+PROS
+
+1) Flexible sizing
+2) redundancy
+3) Economies of scale
+
+CONS 
+
+1) High cost
+2)BMS required for each series string 
+3) Out of balance string needs to be left open circuit

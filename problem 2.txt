@@ -1,0 +1,54 @@
+To shift the PWM signal around a 0V mean so that the output waveform varies between -1.65V to +1.65V, you can use an op-amp circuit known as a summing amplifier with a voltage offset. Here's a circuit diagram to achieve this:
+
+                    R1
+PWM Signal -----/\/\/\/\-----+----------------------- Output
+                             |
+                            \ /
+                            ---
+                             |   Op-Amp
+                             |   (Non-Inverting Summing Amplifier)
+                             |
+                             |
+                             |   Vref = 1.65V
+                             |
+                             |
+                            ---
+                            / \
+                             |
+                             |
+GND ------------------------+
+
+
+In this circuit:
+- Connect the PWM signal to the inverting input of the op-amp through a resistor R1.
+- Connect a voltage reference of 1.65V to the non-inverting input of the op-amp.
+- The op-amp will sum the PWM signal and the 1.65V reference voltage, effectively shifting the PWM signal around a 0V mean.
+- The output will now vary between -1.65V to +1.65V.
+
+To shift this waveform back to the original level (above 0V), you can use another op-amp circuit known as a non-inverting amplifier with a gain of 2. Here's a circuit diagram to achieve this:
+
+                    R2
+Input Signal -----/\/\/\/\-----+----------------------- Output
+                             |
+                            \ /
+                            ---
+                             |   Op-Amp
+                             |   (Non-Inverting Amplifier)
+                             |
+                             |
+                             |   Gain = 2
+                             |
+                             |
+                            ---
+                            / \
+                             |
+                             |
+GND ------------------------+
+
+
+In this circuit:
+- Connect the shifted PWM signal to the non-inverting input of the op-amp through a resistor R2.
+- Set the feedback resistor of the op-amp to have a ratio of R2 to R3 such that the gain is 2.
+- The op-amp will amplify the shifted PWM signal by a factor of 2, effectively shifting it back to the original level above 0V.
+
+These two circuits can be implemented using operational amplifiers and resistors to achieve the desired waveform shifting and restoration.
